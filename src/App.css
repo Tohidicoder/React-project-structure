@@ -1,0 +1,932 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page {
+  width: min(1200px, 94%);
+  margin: auto;
+  padding: 35px 0;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-label {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  background: #eef2ff;
+  color: #4f46e5;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.page-header h1 {
+  margin: 0 0 10px;
+
+  font-size: clamp(28px, 4vw, 42px);
+
+  color: #243b73;
+}
+
+.page-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+========================================================= */
+
+.architecture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================================================
+   COMPONENTS BIG CARD
+========================================================= */
+
+.components-box {
+  width: 100%;
+
+  padding: 25px;
+
+  border: 3px solid #a78bfa;
+  border-radius: 20px;
+
+  background: #f3f0ff;
+
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.08);
+}
+
+.components-box > h2 {
+  margin: 0 0 8px;
+
+  color: #5b21b6;
+
+  font-size: 22px;
+}
+
+.group-description {
+  margin: 0 0 25px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   COMPONENT GRID
+========================================================= */
+
+.components-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   COMPONENT CARDS
+========================================================= */
+
+.component-card {
+  display: flex;
+  gap: 15px;
+
+  min-width: 0;
+
+  padding: 18px;
+
+  border: 2px solid;
+  border-radius: 14px;
+
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.component-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   COMPONENT NUMBER
+========================================================= */
+
+.component-number {
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   COMPONENT CONTENT
+========================================================= */
+
+.component-content {
+  min-width: 0;
+}
+
+.component-content h3 {
+  margin: 4px 0 8px;
+
+  font-size: 18px;
+}
+
+.component-content p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FILE LIST
+========================================================= */
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-top: 14px;
+
+  font-size: 14px;
+}
+
+.file-list span {
+  display: block;
+
+  color: #475569;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   01 NAVBAR - BLUE
+========================================================= */
+
+.component-card:nth-child(1) {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.component-card:nth-child(1) .component-number {
+  background: #2563eb;
+}
+
+.component-card:nth-child(1) h3 {
+  color: #1d4ed8;
+}
+
+
+/* =========================================================
+   02 HERO - PURPLE
+========================================================= */
+
+.component-card:nth-child(2) {
+  background: #faf5ff;
+  border-color: #d8b4fe;
+}
+
+.component-card:nth-child(2) .component-number {
+  background: #9333ea;
+}
+
+.component-card:nth-child(2) h3 {
+  color: #7e22ce;
+}
+
+
+/* =========================================================
+   03 ABOUT - GREEN
+========================================================= */
+
+.component-card:nth-child(3) {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.component-card:nth-child(3) .component-number {
+  background: #16a34a;
+}
+
+.component-card:nth-child(3) h3 {
+  color: #15803d;
+}
+
+
+/* =========================================================
+   04 SERVICES - CYAN
+========================================================= */
+
+.component-card:nth-child(4) {
+  background: #ecfeff;
+  border-color: #67e8f9;
+}
+
+.component-card:nth-child(4) .component-number {
+  background: #0891b2;
+}
+
+.component-card:nth-child(4) h3 {
+  color: #0e7490;
+}
+
+
+/* =========================================================
+   05 ODOO - ORANGE
+========================================================= */
+
+.component-card:nth-child(5) {
+  background: #fff7ed;
+  border-color: #fdba74;
+}
+
+.component-card:nth-child(5) .component-number {
+  background: #ea580c;
+}
+
+.component-card:nth-child(5) h3 {
+  color: #c2410c;
+}
+
+
+/* =========================================================
+   06 AI & AUTOMATION - PINK
+========================================================= */
+
+.component-card:nth-child(6) {
+  background: #fdf2f8;
+  border-color: #f9a8d4;
+}
+
+.component-card:nth-child(6) .component-number {
+  background: #db2777;
+}
+
+.component-card:nth-child(6) h3 {
+  color: #be185d;
+}
+
+
+/* =========================================================
+   07 ENGINEERING - INDIGO
+========================================================= */
+
+.component-card:nth-child(7) {
+  background: #eef2ff;
+  border-color: #a5b4fc;
+}
+
+.component-card:nth-child(7) .component-number {
+  background: #4f46e5;
+}
+
+.component-card:nth-child(7) h3 {
+  color: #4338ca;
+}
+
+
+/* =========================================================
+   08 INDUSTRIES - YELLOW
+========================================================= */
+
+.component-card:nth-child(8) {
+  background: #fefce8;
+  border-color: #fde047;
+}
+
+.component-card:nth-child(8) .component-number {
+  background: #ca8a04;
+}
+
+.component-card:nth-child(8) h3 {
+  color: #a16207;
+}
+
+
+/* =========================================================
+   09 FAQ - TEAL
+========================================================= */
+
+.component-card:nth-child(9) {
+  background: #f0fdfa;
+  border-color: #5eead4;
+}
+
+.component-card:nth-child(9) .component-number {
+  background: #0f766e;
+}
+
+.component-card:nth-child(9) h3 {
+  color: #0f766e;
+}
+
+
+/* =========================================================
+   10 FOOTER - SLATE
+========================================================= */
+
+.component-card:nth-child(10) {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.component-card:nth-child(10) .component-number {
+  background: #475569;
+}
+
+.component-card:nth-child(10) h3 {
+  color: #334155;
+}
+
+
+/* =========================================================
+   CONNECTION LINES
+========================================================= */
+
+.connector {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #64748b;
+}
+
+.connector span {
+  font-size: 38px;
+
+  font-weight: bold;
+
+  color: #94a3b8;
+
+  line-height: 1.2;
+}
+
+.connector p {
+  margin: 5px 0 15px;
+
+  font-size: 14px;
+
+  color: #64748b;
+}
+
+
+/* =========================================================
+   APP AND MAIN CARDS
+========================================================= */
+
+.file-card {
+  width: min(650px, 100%);
+
+  padding: 22px;
+
+  border: 3px solid;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+.file-card h2 {
+  margin: 0 0 8px;
+
+  font-size: 21px;
+}
+
+.file-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CODE BOX
+========================================================= */
+
+.file-card code {
+  display: block;
+
+  padding: 12px;
+
+  margin-top: 15px;
+
+  border-radius: 8px;
+
+  overflow-wrap: anywhere;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   APP.JSX
+========================================================= */
+
+.app-card {
+  background: #fff7ed;
+
+  border-color: #fb923c;
+}
+
+.app-card h2 {
+  color: #c2410c;
+}
+
+.app-card code {
+  background: #7c2d12;
+
+  color: #ffedd5;
+}
+
+
+/* =========================================================
+   MAIN.JSX
+========================================================= */
+
+.main-card {
+  background: #ecfeff;
+
+  border-color: #22d3ee;
+}
+
+.main-card h2 {
+  color: #0e7490;
+}
+
+.main-card code {
+  background: #164e63;
+
+  color: #cffafe;
+}
+
+
+/* =========================================================
+   BROWSER
+========================================================= */
+
+.browser-card {
+  width: min(650px, 100%);
+
+  padding: 25px;
+
+  border: 3px solid #4ade80;
+
+  border-radius: 16px;
+
+  background: #f0fdf4;
+
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.08);
+}
+
+.browser-card h2 {
+  margin: 0 0 8px;
+
+  color: #15803d;
+}
+
+.browser-card p {
+  margin: 0;
+
+  color: #166534;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   OTHER PROJECT FILES
+========================================================= */
+
+.project-files {
+  margin-top: 45px;
+
+  padding: 25px;
+
+  border: 2px solid #c4b5fd;
+
+  border-radius: 18px;
+
+  background: #f8f7ff;
+
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.06);
+}
+
+.project-files > h2 {
+  margin: 0 0 20px;
+
+  color: #4c1d95;
+
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   INFO GRID
+========================================================= */
+
+.info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   INFO CARDS
+========================================================= */
+
+.info-card {
+  padding: 18px;
+
+  border: 2px solid;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.09);
+}
+
+.info-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 16px;
+}
+
+.info-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   01 PACKAGE.JSON
+========================================================= */
+
+.info-card:nth-child(1) {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.info-card:nth-child(1) h3 {
+  color: #1d4ed8;
+}
+
+
+/* =========================================================
+   02 NODE_MODULES
+========================================================= */
+
+.info-card:nth-child(2) {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.info-card:nth-child(2) h3 {
+  color: #15803d;
+}
+
+
+/* =========================================================
+   03 PACKAGE-LOCK.JSON
+========================================================= */
+
+.info-card:nth-child(3) {
+  background: #fff7ed;
+  border-color: #fdba74;
+}
+
+.info-card:nth-child(3) h3 {
+  color: #c2410c;
+}
+
+
+/* =========================================================
+   04 GITIGNORE
+========================================================= */
+
+.info-card:nth-child(4) {
+  background: #fdf2f8;
+  border-color: #f9a8d4;
+}
+
+.info-card:nth-child(4) h3 {
+  color: #be185d;
+}
+
+
+/* =========================================================
+   05 PUBLIC
+========================================================= */
+
+.info-card:nth-child(5) {
+  background: #ecfeff;
+  border-color: #67e8f9;
+}
+
+.info-card:nth-child(5) h3 {
+  color: #0e7490;
+}
+
+
+/* =========================================================
+   06 ASSETS
+========================================================= */
+
+.info-card:nth-child(6) {
+  background: #eef2ff;
+  border-color: #a5b4fc;
+}
+
+.info-card:nth-child(6) h3 {
+  color: #4338ca;
+}
+
+
+/* =========================================================
+   07 INDEX.HTML
+========================================================= */
+
+.info-card:nth-child(7) {
+  background: #fefce8;
+  border-color: #fde047;
+}
+
+.info-card:nth-child(7) h3 {
+  color: #a16207;
+}
+
+.info-card:nth-child(8) {
+  background: hsl(201, 56%, 93%);
+  border-color: #47ccfd;
+}
+
+.info-card:nth-child(8) h3 {
+  color: #239703;
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.page-footer {
+  margin-top: 30px;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  background: #1e293b;
+
+  color: white;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .components-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .page {
+    width: 92%;
+
+    padding: 25px 0;
+  }
+
+  .page-header {
+    margin-bottom: 30px;
+  }
+
+  .page-header h1 {
+    font-size: 30px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .components-box {
+    padding: 15px;
+
+    border-radius: 16px;
+  }
+
+  .components-box > h2 {
+    font-size: 19px;
+  }
+
+  .components-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .component-card {
+    padding: 15px;
+
+    gap: 12px;
+  }
+
+  .component-number {
+    width: 36px;
+    height: 36px;
+
+    font-size: 13px;
+  }
+
+  .component-content h3 {
+    font-size: 17px;
+  }
+
+  .component-content p {
+    font-size: 13px;
+  }
+
+  .file-list {
+    font-size: 13px;
+  }
+
+  .file-card,
+  .browser-card {
+    padding: 18px;
+  }
+
+  .file-card h2,
+  .browser-card h2 {
+    font-size: 18px;
+  }
+
+  .project-files {
+    padding: 15px;
+
+    margin-top: 35px;
+  }
+
+  .project-files > h2 {
+    font-size: 19px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 15px;
+  }
+
+  .connector span {
+    font-size: 32px;
+  }
+
+  .connector p {
+    font-size: 13px;
+  }
+
+  .page-footer {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .page {
+    width: 94%;
+  }
+
+  .component-card {
+    padding: 12px;
+  }
+
+  .component-number {
+    width: 32px;
+    height: 32px;
+  }
+
+  .file-list {
+    font-size: 12px;
+  }
+}
